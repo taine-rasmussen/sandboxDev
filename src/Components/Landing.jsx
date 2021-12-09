@@ -4,8 +4,10 @@ import '../Styles/Landing.css'
 
 const Landing = () => {
    return (
-      <div>
-         
+      <div className="Landing-container">
+         <div className="Landing-header">
+            <h1>Welcome to the Sandbox</h1>
+         </div>
       </div>
    )
 }
