@@ -1,0 +1,18 @@
+.login-container {
+  width: 95vw;
+  height: 100vh;
+  display: flex;
+}
+
+.login-header-container {
+  display: flex;
+  margin-top: 1rem;
+  height: 10vh;
+  width: 100vw;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login-header-container h1 {
+  font-size: 3rem;
+}
