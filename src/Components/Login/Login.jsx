@@ -16,9 +16,11 @@ const Login = () => {
             <form className="login-form">
                <input
                   type="text"
+                  placeholder='Username...'
                />
                <input 
                   type="password"
+                  placeholder='Password...'
                />
                   <div className="login-form-footer">
                      <button>Login</button>
