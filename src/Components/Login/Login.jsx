@@ -15,11 +15,15 @@ const Login = () => {
          <div className="login-form-container">
             <form className="login-form">
                <input
-                  type="text"/>
+                  type="text"
+               />
                <input 
-                  type="password"/>
-                  <button>Login</button>
-                  <h4>already have account?</h4>
+                  type="password"
+               />
+                  <div className="login-form-footer">
+                     <button>Login</button>
+                     <h4>already have account?</h4>
+                  </div>
             </form>
          </div>
 
