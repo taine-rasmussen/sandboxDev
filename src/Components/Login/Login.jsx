@@ -24,7 +24,7 @@ const Login = () => {
                />
                   <div className="login-form-footer">
                      <button>Login</button>
-                     <h4>already have account?</h4>
+                     <h4>Already have an account?</h4>
                   </div>
             </form>
          </div>

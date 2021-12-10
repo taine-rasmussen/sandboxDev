@@ -21,7 +21,8 @@ button:focus {
 }
 
 .login-header-container h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
+  color: #cb997e;
 }
 
 .login-form-container {
@@ -48,9 +49,20 @@ button:focus {
 .login-form button {
   margin-top: 1rem;
   margin-right: 0.5rem;
+  padding: 10px 20px;
+}
+
+.login-form h4 {
+  color: #cb997e;
+  font-style: italic;
 }
 
 .login-form-footer {
   display: flex;
   flex-direction: row !important;
+  align-items: baseline !important;
+}
+
+.login-form button:hover {
+  background-color: #000;
 }
