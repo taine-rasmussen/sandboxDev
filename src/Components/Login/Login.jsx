@@ -12,6 +12,23 @@ const Login = () => {
             </Link>
          </div>
 
+         <div className="login-form-container">
+            <form className="login-form">
+               <input
+                  type="text"/>
+               <input 
+                  type="password"/>
+                  <button>Login</button>
+                  <h4>already have account?</h4>
+            </form>
+         </div>
+
+
+
+
+
+
+
       </div>
    )
 }
