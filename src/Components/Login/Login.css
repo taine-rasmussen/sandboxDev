@@ -5,6 +5,16 @@ button:focus {
   outline: none;
 }
 
+input,
+select,
+textarea {
+  color: #cb997e;
+}
+
+::placeholder {
+  color: #cb997e;
+}
+
 .login-container {
   display: flex;
   flex-direction: column;
@@ -43,13 +53,27 @@ button:focus {
   margin-top: 1rem;
   padding: 15px 3px;
   border: 0px solid #000;
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid #a5a58d;
+  background-color: #ffe8d6;
+}
+
+.login-form input:hover {
+  border-bottom: 2px solid #6b705c;
 }
 
 .login-form button {
   margin-top: 1rem;
   margin-right: 0.5rem;
-  padding: 10px 20px;
+  padding: 5px 10px;
+  color: #a5a58d;
+  font-size: 1.1rem;
+  background-color: #ffe8d6;
+  border-radius: 5px;
+  border: 1px solid #ffe8d6;
+}
+
+.login-form button:hover {
+  border: 1px solid #6b705c;
 }
 
 .login-form h4 {
@@ -63,6 +87,7 @@ button:focus {
   align-items: baseline !important;
 }
 
-.login-form button:hover {
-  background-color: #000;
+.login-form h4:hover {
+  color: #6b705c;
+  cursor: pointer;
 }
