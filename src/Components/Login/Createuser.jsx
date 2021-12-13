@@ -1,7 +1,8 @@
 import React from 'react'
 import './Createuser.css'
 
-const Createuser = () => {
+const Createuser = ({toggleLogin, setToggleLogin}) => {
+
 
    return (
       <div className="createuser-container">
@@ -20,7 +21,7 @@ const Createuser = () => {
                />
                 <div className="createuser-form-footer">
                      <button>Create user</button>
-                     <h4>Already have an account?</h4>
+                     <h4 onClick={() => {setToggleLogin(!toggleLogin)}}>Already have an account?</h4>
                   </div>
             </form>
       </div>
