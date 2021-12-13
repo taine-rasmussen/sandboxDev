@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Login.css'
 
+// Components
+import Createuser from './Createuser'
+import User from './User'
+
 const Login = () => {
+
+   const [toggleLogin, setToggleLogin] = useState(false)
+
    return (
       <div className="login-container">
          <div className="login-header-container">
@@ -13,28 +20,11 @@ const Login = () => {
          </div>
 
          <div className="login-form-container">
-            <form className="login-form">
-               <input
-                  type="text"
-                  placeholder='Username...'
-               />
-               <input 
-                  type="password"
-                  placeholder='Password...'
-               />
-                  <div className="login-form-footer">
-                     <button>Login</button>
-                     <h4>Already have an account?</h4>
-                  </div>
-            </form>
+            {toggleLogin ? 
+               <User setToggleLogin={setToggleLogin} toggleLogin={toggleLogin}/> :
+               <Createuser setToggleLogin={setToggleLogin} toggleLogin={toggleLogin}/>
+            }
          </div>
-
-
-
-
-
-
-
       </div>
    )
 }

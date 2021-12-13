@@ -1,4 +1,5 @@
 import React from 'react'
+import './Createuser.css'
 
 const Createuser = () => {
 
@@ -17,6 +18,10 @@ const Createuser = () => {
                   placeholder="Password..."
                   type="text"
                />
+                <div className="createuser-form-footer">
+                     <button>Create user</button>
+                     <h4>Already have an account?</h4>
+                  </div>
             </form>
       </div>
    )
