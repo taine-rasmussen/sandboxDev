@@ -1,2 +1,52 @@
 .createuser-container {
+  display: flex;
+}
+
+.createuser-form-container {
+  flex-direction: column;
+  width: 20vw;
+}
+
+.createuser-form-container input {
+  margin: 5px 5px;
+  margin-top: 1rem;
+  padding: 15px 3px;
+  border: 0px solid #000;
+  border-bottom: 2px solid #a5a58d;
+  background-color: #ffe8d6;
+}
+
+.createuser-form-container input:hover {
+  border-bottom: 2px solid #6b705c;
+}
+
+.createuser-password {
+  display: flex;
+  flex-direction: row !important;
+}
+
+.createuser-form-footer {
+  display: flex;
+  flex-direction: row !important;
+  justify-content: space-between;
+  width: 25vw;
+}
+
+.createuser-form-footer span {
+  color: #cb997e;
+  font-style: italic;
+}
+
+.createuser-form-footer span:hover {
+  color: #6b705c;
+  cursor: pointer;
+}
+
+.createuser-form-footer button {
+  padding: 5px 10px;
+  color: #a5a58d;
+  font-size: 1.1rem;
+  background-color: #ffe8d6;
+  border-radius: 5px;
+  border: 1px solid #ffe8d6;
 }

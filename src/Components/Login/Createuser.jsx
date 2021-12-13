@@ -6,24 +6,34 @@ const Createuser = ({toggleLogin, setToggleLogin}) => {
 
    return (
       <div className="createuser-container">
-            <form >
-               <input 
-                  placeholder="Username..."
-                  type="text"
-               />
-               <input 
-                  placeholder="Email..."
-                  type="text"
-               />
-               <input 
-                  placeholder="Password..."
-                  type="text"
-               />
+         <div className="createuser-form-container">
+            <form>
+               <div className='createuser-details'>
+                  <input 
+                     placeholder="Username..."
+                     type="text"
+                  />
+                  <input 
+                     placeholder="Email..."
+                     type="text"
+                  />
+               </div>
+               <div className='createuser-password'>
+                  <input 
+                     placeholder="Password..."
+                     type="password"
+                  />
+                  <input 
+                     placeholder="Re-type Password..."
+                     type="password"
+                  />
+               </div>
                 <div className="createuser-form-footer">
                      <button>Create user</button>
-                     <h4 onClick={() => {setToggleLogin(!toggleLogin)}}>Already have an account?</h4>
+                     <button onClick={() => {setToggleLogin(!toggleLogin)}}><span>Already have an account?</span></button>
                   </div>
             </form>
+         </div>
       </div>
    )
 }
