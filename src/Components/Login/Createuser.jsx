@@ -29,7 +29,7 @@ const Createuser = ({toggleLogin, setToggleLogin}) => {
                   />
                </div>
                 <div className="createuser-form-footer">
-                     <button>Create user</button>
+                     <button className="btn-hover">Create user</button>
                      <button onClick={() => {setToggleLogin(!toggleLogin)}}><span>Already have an account?</span></button>
                   </div>
             </form>

@@ -20,16 +20,21 @@
   border-bottom: 2px solid #6b705c;
 }
 
+.createuser-details {
+  display: flex;
+  flex-direction: column !important;
+}
+
 .createuser-password {
   display: flex;
   flex-direction: row !important;
+  justify-content: space-between;
 }
 
 .createuser-form-footer {
   display: flex;
   flex-direction: row !important;
   justify-content: space-between;
-  width: 25vw;
 }
 
 .createuser-form-footer span {
@@ -49,4 +54,9 @@
   background-color: #ffe8d6;
   border-radius: 5px;
   border: 1px solid #ffe8d6;
+}
+
+.btn-hover:hover {
+  border: 1px solid #6b705c;
+  border-radius: 5px;
 }
