@@ -15,8 +15,8 @@ const User = ({toggleLogin, setToggleLogin}) => {
                   placeholder='Password...'
                />
                   <div className="login-form-footer">
-                     <button>Login</button>
-                     <h4 onClick={() => {setToggleLogin(!toggleLogin)}}>Need to create account?</h4>
+                     <button className="btn-hover">Login</button>
+                     <button onClick={() => {setToggleLogin(!toggleLogin)}}><span>Need to create account?</span></button>
                   </div>
             </form>
       </div>

@@ -72,10 +72,6 @@ textarea {
   border: 1px solid #ffe8d6;
 }
 
-.login-form button:hover {
-  border: 1px solid #6b705c;
-}
-
 .login-form h4 {
   color: #cb997e;
   font-style: italic;
@@ -90,4 +86,25 @@ textarea {
 .login-form h4:hover {
   color: #6b705c;
   cursor: pointer;
+}
+
+.login-form-footer span {
+  color: #cb997e;
+  font-style: italic;
+}
+
+.login-form-footer span:hover {
+  color: #6b705c;
+  cursor: pointer;
+}
+
+.btn-hover:hover {
+  border: 1px solid #6b705c;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 650px) {
+  .login-form-footer button {
+    font-size: 0.7rem;
+  }
 }
