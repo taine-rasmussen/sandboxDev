@@ -13,4 +13,36 @@
   color: #fcfdff;
   border-bottom: 2px solid #fcfdff;
   width: max-content;
+  cursor: pointer;
+}
+
+.logo-container {
+  padding: 2rem 0rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.logo-top {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 50px solid #fcfdff;
+}
+.logo-mid {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 50px solid #f0e2fa;
+  margin-right: -20px;
+}
+
+.logo-bottom {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 50px solid #b089f5;
+  margin-right: -20px;
 }

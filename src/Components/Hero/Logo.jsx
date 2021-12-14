@@ -7,7 +7,9 @@ import './Heroleft.css'
 const Logo = () => {
    return (
       <div className="logo-container">
-         Logo goes here
+         <div className="logo-bottom"></div>
+         <div className="logo-mid"></div>
+         <div className="logo-top"></div>
       </div>
    )
 }
