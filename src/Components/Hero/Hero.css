@@ -1,3 +1,18 @@
 .hero-container {
-  margin: 2rem 2rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.hero-leftside-container {
+  background-color: #6420e2;
+  display: flex;
+  width: 33.333vw;
+  height: 100vh;
+}
+
+.hero-rightside-container {
+  background-color: #5121b1;
+  display: flex;
+  width: 66.666vw;
+  height: 100vh;
 }
