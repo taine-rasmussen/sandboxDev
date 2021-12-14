@@ -107,4 +107,11 @@ textarea {
   .login-form-footer button {
     font-size: 0.7rem;
   }
+
+  .login-header-container {
+    flex-direction: column;
+  }
+  .login-header-container h1 {
+    font-size: 2rem;
+  }
 }
