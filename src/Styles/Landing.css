@@ -12,5 +12,28 @@
 }
 
 .landing-header h1 {
-  font-size: 4rem;
+  font-size: 5rem;
+}
+
+.landing-links-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0vh 10vw;
+}
+
+.landing-links-container button {
+  background-color: #ffe8d6;
+  border: 1px solid #ffe8d6;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  padding: 5px 15px;
+}
+
+.landing-links-container button:hover {
+  background-color: #000;
+  color: #ffe8d6;
+  box-shadow: 3px 3px 3px #a5a58d;
+  border: 1px solid #000;
+  font-style: italic;
+  cursor: pointer;
 }
