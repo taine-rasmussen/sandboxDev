@@ -1,0 +1,16 @@
+.menu-container {
+  margin-top: -33vh;
+}
+
+.menu-container li {
+  margin: 1.5rem 0rem;
+  color: #b089f5;
+  font-size: 1.3rem;
+  list-style: none;
+}
+
+.menu-container li:hover {
+  color: #fcfdff;
+  border-bottom: 2px solid #fcfdff;
+  width: max-content;
+}

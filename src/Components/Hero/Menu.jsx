@@ -1,5 +1,5 @@
 import React from 'react'
-import './heroleft.css'
+import './Heroleft.css'
 
 
 

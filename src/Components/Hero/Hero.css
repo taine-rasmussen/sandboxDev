@@ -6,8 +6,11 @@
 .hero-leftside-container {
   background-color: #6420e2;
   display: flex;
+  flex-direction: column;
   width: 33.333vw;
   height: 100vh;
+  justify-content: space-between;
+  padding-left: 75px;
 }
 
 .hero-rightside-container {
