@@ -60,3 +60,16 @@
   border: 1px solid #6b705c;
   border-radius: 5px;
 }
+
+@media only screen and (max-width: 650px) {
+  .createuser-form-container {
+    width: 40vw;
+  }
+  .createuser-form-footer button {
+    font-size: 0.8rem;
+  }
+
+  .createuser-password {
+    flex-direction: column !important;
+  }
+}
