@@ -19,6 +19,7 @@ textarea {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  margin: 1rem 2rem;
 }
 
 .login-header-container {
