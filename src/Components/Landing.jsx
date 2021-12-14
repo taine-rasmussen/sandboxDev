@@ -14,6 +14,11 @@ const Landing = () => {
                   <button>Log in page</button>
                </Link>
             </div>
+            <div className="landing-link">
+               <Link to='hero'>
+                  <button>Hero example</button>
+               </Link>
+            </div>
          </div>
       </div>
    )
