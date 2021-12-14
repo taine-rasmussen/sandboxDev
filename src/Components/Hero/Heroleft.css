@@ -1,9 +1,9 @@
 .menu-container {
-  margin-top: -33vh;
+  margin-top: -35vh;
 }
 
 .menu-container li {
-  margin: 1.5rem 0rem;
+  padding-top: 1rem;
   color: #b089f5;
   font-size: 1.3rem;
   list-style: none;
@@ -14,6 +14,11 @@
   border-bottom: 2px solid #fcfdff;
   width: max-content;
   cursor: pointer;
+}
+
+.menu-container li:visited {
+  text-decoration: none;
+  color: #b089f5;
 }
 
 .logo-container {

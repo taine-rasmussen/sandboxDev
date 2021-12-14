@@ -11,6 +11,11 @@
   width: 100%;
 }
 
+.landing-header span {
+  letter-spacing: -11.5px;
+  font-size: 6rem;
+}
+
 .landing-header h1 {
   font-size: 5rem;
 }
@@ -22,19 +27,23 @@
 }
 
 .landing-links-container button {
-  background-color: #ffe8d6;
-  border: 1px solid #ffe8d6;
-  font-size: 1.5rem;
-  border-radius: 5px;
-  padding: 5px 15px;
-  margin: 1rem 1rem;
-}
-
-.landing-links-container button:hover {
   background-color: #000;
   color: #ffe8d6;
+  font-size: 1.5rem;
+  padding: 5px 15px;
+  margin: 1rem 1rem;
   box-shadow: 3px 3px 3px #a5a58d;
+  border-radius: 5px;
   border: 1px solid #000;
   font-style: italic;
   cursor: pointer;
+}
+
+.landing-links-container button:hover {
+  background-color: #ffe8d6;
+  border: 1px solid #ffe8d6;
+  font-size: 1.5rem;
+  font-style: normal;
+  color: #000;
+  font-weight: 600;
 }
