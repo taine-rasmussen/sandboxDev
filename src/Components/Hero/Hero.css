@@ -11,6 +11,7 @@
   height: 100vh;
   justify-content: space-between;
   padding-left: 75px;
+  z-index: 11;
 }
 
 .hero-rightside-container {
@@ -18,4 +19,5 @@
   display: flex;
   width: 66.666vw;
   height: 100vh;
+  z-index: 10;
 }

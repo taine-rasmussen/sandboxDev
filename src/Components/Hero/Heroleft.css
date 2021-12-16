@@ -51,3 +51,35 @@
   border-left: 50px solid #b089f5;
   margin-right: -20px;
 }
+
+.social-container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1rem;
+}
+
+.social-link-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.social-link {
+  margin-right: 1rem;
+  color: #b089f5;
+}
+
+.social-link i {
+  font-size: 1.3rem;
+}
+
+.social-link i:hover {
+  transform: scale(1.3);
+}
+
+.social-separator {
+  border-top: 1.5px solid #b089f5;
+  width: 25vw;
+  position: fixed;
+  margin-top: 7px;
+  margin-left: 11%;
+}
