@@ -1,0 +1,80 @@
+.createuser-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.createuser-header {
+  display: flex;
+  justify-content: center;
+}
+
+.createuser-header h1 {
+  font-size: 2.25rem;
+  padding-top: 1.75rem;
+  color: #e4e6ea;
+}
+
+.createuser-form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.createuser-form button {
+  background-color: #0b847a;
+  border-radius: 10px;
+  color: #e4e6ea;
+  font-size: 1.1rem;
+  border: 2px solid #0b847a;
+  height: 5vh;
+  width: 80%;
+  margin: 2rem 0rem;
+  margin-left: 4px;
+}
+
+.createuser-form button:hover {
+  background-color: #18191a;
+  color: #717277;
+  border: 3px solid #24282c;
+  cursor: pointer;
+}
+
+.createuser-input {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem 0rem;
+  width: 80%;
+}
+
+.createuser-input input {
+  background-color: #18191a;
+  border-radius: 10px;
+  border: 2px solid #24282c;
+  height: 4vh;
+  width: 100%;
+}
+
+.createuser-input label {
+  font-size: 1rem;
+  margin-left: 4px;
+  color: #717277;
+}
+
+.createuser-passowrds {
+  display: flex;
+  margin-top: -0.75rem;
+  width: 80%;
+  margin-left: 30px;
+}
+
+.createuser-passowrds input {
+  background-color: #18191a;
+  border-radius: 10px;
+  border: 2px solid #24282c;
+  height: 4vh;
+  width: 80%;
+}

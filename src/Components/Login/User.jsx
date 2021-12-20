@@ -2,12 +2,13 @@ import React from 'react'
 import './User.css'
 
 
+const User = ({toggleLogin, setToggleLogin}) => {
 
-const User = () => {
+
    return (
       <div className="user-container">
         <div className="user-header">
-            <h1>Welcome Back!</h1>
+               <h1>Welcome Back!</h1>
         </div>
         <div className="user-form">
             <div className="user-input">
@@ -26,7 +27,8 @@ const User = () => {
         </div>
         <div className="user-footer">
            <p>
-              Don't have an account? <span>Register</span>
+              Don't have an account? 
+              <span onClick={() => setToggleLogin(!toggleLogin)}>Register</span>
            </p>
         </div>
       </div>
