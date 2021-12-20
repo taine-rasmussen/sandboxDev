@@ -1,5 +1,16 @@
 .login-container {
-  background-color: aquamarine;
+  background-color: #0b847a;
   border-top: 1px solid #000;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-body-container {
+  width: 25%;
+  height: 60%;
+  /* background-color: #18191a;  use this for darker grey*/
+  background-color: #242526;
+  border-radius: 10px;
 }
