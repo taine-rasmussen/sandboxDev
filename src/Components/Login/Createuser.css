@@ -32,7 +32,7 @@
   border: 2px solid #0b847a;
   height: 5vh;
   width: 80%;
-  margin: 2rem 0rem;
+  margin: 1.75rem 0rem;
   margin-left: 4px;
 }
 
@@ -66,7 +66,6 @@
 
 .createuser-passowrds {
   display: flex;
-  margin-top: -0.75rem;
   width: 80%;
   margin-left: 30px;
 }
@@ -77,4 +76,25 @@
   border: 2px solid #24282c;
   height: 4vh;
   width: 80%;
+}
+
+.createuser-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.createuser-footer p {
+  color: #717277;
+}
+
+.createuser-footer span {
+  color: #0b847a !important;
+  margin-left: 5px;
+}
+
+.createuser-footer span:hover {
+  border-bottom: #0b847a solid 1.5px;
+  width: max-content;
+  cursor: pointer;
 }

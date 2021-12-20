@@ -38,12 +38,12 @@ const Createuser = ({toggleLogin, setToggleLogin}) => {
             </div>
             <button>Create account</button>
         </div>
-        {/* <div className="createuser-footer">
+        <div className="createuser-footer">
            <p>
               Already have an account? 
               <span onClick={() => setToggleLogin(!toggleLogin)}>Log in</span>
            </p>
-        </div> */}
+        </div>
       </div>
    )
 }
