@@ -19,9 +19,28 @@
 .user-form {
   width: 100%;
   display: flex;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.user-form button {
+  background-color: #0b847a;
+  border-radius: 10px;
+  color: #e4e6ea;
+  font-size: 1.1rem;
+  border: 2px solid #0b847a;
+  height: 5vh;
+  width: 80%;
+  margin: 1.5rem 0rem;
+  margin-left: 4px;
+}
+
+.user-form button:hover {
+  background-color: #18191a;
+  color: #717277;
+  border: 3px solid #24282c;
+  cursor: pointer;
 }
 
 .user-input {
@@ -44,4 +63,24 @@
   margin-left: 4px;
   margin-bottom: 5px;
   color: #717277;
+}
+
+.user-footer {
+  display: flex;
+  align-center: center;
+  justify-content: center;
+}
+
+.user-footer p {
+  color: #717277;
+}
+
+.user-footer span {
+  color: #0b847a !important;
+}
+
+.user-footer span:hover {
+  border-bottom: #0b847a solid 1.5px;
+  width: max-content;
+  cursor: pointer;
 }

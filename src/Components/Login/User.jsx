@@ -2,6 +2,7 @@ import React from 'react'
 import './User.css'
 
 
+
 const User = () => {
    return (
       <div className="user-container">
@@ -21,6 +22,12 @@ const User = () => {
                   type="password"
                />
             </div>
+            <button>Log in</button>
+        </div>
+        <div className="user-footer">
+           <p>
+              Don't have an account? <span>Register</span>
+           </p>
         </div>
       </div>
    )
