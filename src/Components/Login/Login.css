@@ -22,8 +22,8 @@ textarea {
 }
 
 .login-body-container {
-  width: 25%;
-  height: 60%;
+  width: 30%;
+  height: max-content;
   background-color: #242526;
   border-radius: 10px;
 }
