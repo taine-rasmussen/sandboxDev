@@ -44,7 +44,6 @@
 }
 
 .user-input {
-  margin: 1rem 0rem;
   display: flex;
   flex-direction: column;
   width: 80%;

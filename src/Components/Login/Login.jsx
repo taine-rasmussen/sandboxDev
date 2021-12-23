@@ -7,16 +7,16 @@ import User from './User'
 
 const Login = () => {
 
-   const [toggleLogin, setToggleLogin] = useState(false)
+   const [toggleLogin, setToggleLogin] = useState(true)
 
    return (
       <div className="login-container">
          <div className="login-body-container">
-            {toggleLogin ?
+            {
+               toggleLogin ?
                <User toggleLogin={toggleLogin} setToggleLogin={setToggleLogin}/> :
                <Createuser toggleLogin={toggleLogin} setToggleLogin={setToggleLogin}/>
             }
-            
          </div>
       </div>
    )

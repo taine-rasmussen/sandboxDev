@@ -11,7 +11,7 @@ const User = ({toggleLogin, setToggleLogin}) => {
                <h1>Welcome Back!</h1>
         </div>
         <div className="user-form">
-            <div className="user-input">
+            <div className="user-input user-input-top">
                <label>EMAIL</label>
                <input 
                   type="email"
