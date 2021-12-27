@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const Landing = () => {
 
-   const projects = ['login', 'hero', 'tictactoe']
+   const projects = ['login', 'hero', 'tictactoe', 'memory']
 
    return (
       <div className="landing-container">

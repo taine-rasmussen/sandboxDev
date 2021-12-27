@@ -7,6 +7,7 @@ import Landing from './Components/Landing'
 import Login from './Components/Login/Login'
 import Hero from './Components/Hero/Hero'
 import Gameboard from './Components/TicTacToe/Gameboard'
+import Memory from './Components/Memory/Memory'
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route exact path='/login' element={<Login />}/>
         <Route exact path='/hero' element={<Hero />}/>
         <Route exact path='/tictactoe' element={<Gameboard />}/>
+        <Route exact path='/memory' element={<Memory />}/>
       </Routes>
     </div>
   );
