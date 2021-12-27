@@ -35,7 +35,7 @@ const Gameboard = () => {
    
 
    return(
-      <div className="memory-container">
+      <>
          <div className="memory-game-container">
             <div  className="memory-game-cell" 
                   style={gameCell1 ? cellStyleTrue : cellStyle} 
@@ -58,7 +58,11 @@ const Gameboard = () => {
                >{gameCell4}
             </div>
          </div>
-      </div>
+         <div className='memory-submit-btn'>
+            <button>Submit</button>
+         </div>
+      
+      </>
    )
 }
 

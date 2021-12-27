@@ -12,7 +12,7 @@ const Landing = ({setPageView}) => {
             </p>
          </div>
          <div>
-            <button onClick={() => {setPageView(false)}}>Submit!</button>
+            <button onClick={() => {setPageView(false)}}>Start!</button>
          </div>
 
       </div>
