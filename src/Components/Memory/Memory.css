@@ -1,0 +1,20 @@
+.memory-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.memory-game-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 220px;
+}
+
+.memory-game-cell {
+  border: 1px solid rgb(22, 196, 115);
+  width: 100px;
+  height: 100px;
+}
