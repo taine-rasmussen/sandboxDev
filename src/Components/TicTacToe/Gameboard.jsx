@@ -6,7 +6,17 @@ import './Gameboard.css'
 const Gameboard = () => {
    return (
       <div className="gameboard-container">
-         This is where the gameboard will go
+         <div className="gameboard-area">
+            <div className="gameboard-cell"></div>
+            <div className="gameboard-cell"></div>
+            <div className="gameboard-cell"></div>
+            <div className="gameboard-cell"></div>
+            <div className="gameboard-cell"></div>
+            <div className="gameboard-cell"></div>
+            <div className="gameboard-cell"></div>
+            <div className="gameboard-cell"></div>
+            <div className="gameboard-cell"></div>
+         </div>
       </div>
    )
 }
