@@ -1,6 +1,7 @@
 import React from 'react'
 
-const GameInput = () => {
+const GameInput = ({pattern}) => {
+
    return (
       <div>
          GameInput is working
