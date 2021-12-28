@@ -1,10 +1,13 @@
 import React from 'react'
 
-const GameInput = ({pattern}) => {
+const GameInput = ({gridPattern}) => {
+
+
+      console.log('GameInput data:', gridPattern)
 
    return (
       <div>
-         GameInput is working
+         Grid pattern is working!
       </div>
    )
 }

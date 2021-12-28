@@ -5,25 +5,28 @@ import GameInput from './GameInput'
 
 const Gameboard = () => {
 
-
+   const [changeView, setChangeView] = useState(false)
    const [changeGrid, setChangeGrid] = useState(false)
    const [emptyGrid, setEmptyGrid] = useState([[], [], [], [], [], [], [], [], []])
    const [gridPattern, setGridPattern] = useState([[Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)]])
 
 
    // Updates changeView after 5secs changing the component rendered to GameInput
-   // setInterval(function () {setChangeView(true)}, 5555000);
-  
 
 
-   // console.log('grid:', grid)
+   const createPattern = () => {
+      setChangeGrid(true)
+   setInterval(function () {setChangeView(true)}, 5000);
 
+   }
+   
+
+   console.log(gridPattern)
    return(
       <>
+      {changeView ? <GameInput gridPattern={gridPattern}/> : 
          <div className='memory-game-container'>
             {changeGrid ? gridPattern.map((cell, index) => {
-
-               console.log(cell)
                return(
                   <div 
                      className="memory-game-cell"
@@ -38,11 +41,12 @@ const Gameboard = () => {
                      className="memory-game-cell"
                      key={index}
                      style={{backgroundColor: '#fff'}}
-                  ></div>
+                  ></div> 
                )
             })}
+         {changeGrid ? null : <button onClick={createPattern}>Create Pattern!</button>}
          </div>
-         <button onClick={() => {setChangeGrid(true)}}>create pattern!</button>
+      }  
       </>
    )
 }
