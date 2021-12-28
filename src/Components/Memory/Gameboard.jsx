@@ -11,20 +11,15 @@ const Gameboard = () => {
    const [gridPattern, setGridPattern] = useState([[Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)]])
 
 
-   // Updates changeView after 5secs changing the component rendered to GameInput
-
-
+   // Updates changeView after 5secs changing the component rendered to GameInput - Creates and displays pattern
    const createPattern = () => {
       setChangeGrid(true)
-   setInterval(function () {setChangeView(true)}, 5000);
-
+      setInterval(function () {setChangeView(true)}, 500);
    }
-   
 
-   console.log(gridPattern)
    return(
       <>
-      {changeView ? <GameInput gridPattern={gridPattern}/> : 
+      {changeView ? <GameInput gridPattern={gridPattern} emptyGrid={emptyGrid} setGridPattern={setGridPattern}/> : 
          <div className='memory-game-container'>
             {changeGrid ? gridPattern.map((cell, index) => {
                return(
@@ -50,5 +45,4 @@ const Gameboard = () => {
       </>
    )
 }
-
 export default Gameboard

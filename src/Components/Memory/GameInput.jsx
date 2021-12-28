@@ -1,17 +1,43 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
-const GameInput = ({gridPattern}) => {
+const GameInput = ({gridPattern, emptyGrid, setGridPattern}) => {
+
+   const [bgColour, setBgColour] = useState({backgroundColor: '#fff'})
+   const [pattern, setPattern] = useState([])
+
+   const handleClick = (id) => { 
+   }
 
 
-      console.log('GameInput data:', gridPattern)
+   // Takes generated pattern and addeds it to nested array with id's attached
+   const sortData = () => {
+      gridPattern.forEach((cell, index) => {
+         pattern.push({id: index, pattern: cell})
+      })
+   }
+   // Calls sort Data function on page load
+   useEffect(() => {
+      sortData()
+   }, []);
+   
 
    return (
-      <div>
-         Grid pattern is working!
+      
+      <div className="memory-game-container">
+         {emptyGrid.map((cell, index) => {
+            return(
+               <div 
+                  className="memory-game-cell"
+                  key={index}
+                  style={bgColour}
+                  onClick={() => handleClick(index)}
+               >   
+               </div>
+            )
+         })}
+
+
       </div>
    )
 }
 export default GameInput
-
-
-// For game to work this component needs to know the shape of the pattern created in GamePattern - problem is that the info I need is in that component so I can't pass it back to this component to check. I need to move some info to the parent component so I can pass some things down
