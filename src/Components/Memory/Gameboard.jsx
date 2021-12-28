@@ -1,69 +1,34 @@
-import React, { useState} from 'react'
+import React from 'react'
+
+// Components
+import GamePattern from './GamePattern'
 
 const Gameboard = () => {
 
+   // onClick function that updates selected cells bg colour
+   // const updateCell = (id) => {
+   //    cells.forEach((cell) => {
+   //       if(id === cell.id){
+   //          cell.bgColour = cellStyleTrue
+   //       }
+   //    })
+   //    console.log('cell status:', cells)
+   // }
 
-   const [gameCell1, setGameCell1] = useState(false)
-   const [gameCell2, setGameCell2] = useState(false)
-   const [gameCell3, setGameCell3] = useState(false)
-   const [gameCell4, setGameCell4] = useState(false)
-   const [cellStyle, setCellStyle] = useState({backgroundColor: '#fff'})
-
-
-   // Object used to store change of bg color for cells
-    const cellStyleTrue = {
-      backgroundColor: '#000'
-   }
-
-   // triggered onClick this function updates the cell state triggering the cells bg colour
-   const updateCell1 = () => {
-         setGameCell1(!gameCell1)
-   }
-
-    const updateCell2 = () => {
-         setGameCell2(!gameCell2)
-   }
-
-    const updateCell3 = () => {
-         setGameCell3(!gameCell3)
-   }
-
-    const updateCell4 = () => {
-         setGameCell4(!gameCell4)
-   }
+ // Create another component that will appear first with the pattern the remeber
+ // This component does not need and click to change functionaality 
+ // Just needs to generate a random pattern of colours
+ // Find EDA kalidaccsope code for example generating n number of divs
 
    
 
    return(
       <>
-         <div className="memory-game-container">
-            <div  className="memory-game-cell" 
-                  style={gameCell1 ? cellStyleTrue : cellStyle} 
-                  onClick={updateCell1}
-               >{gameCell1}
-            </div>
-           <div  className="memory-game-cell" 
-                  style={gameCell2 ? cellStyleTrue : cellStyle} 
-                  onClick={updateCell2}
-               >{gameCell2}
-            </div>
-            <div  className="memory-game-cell" 
-                  style={gameCell3 ? cellStyleTrue : cellStyle} 
-                  onClick={updateCell3}
-               >{gameCell3}
-            </div>
-            <div  className="memory-game-cell" 
-                  style={gameCell4 ? cellStyleTrue : cellStyle} 
-                  onClick={updateCell4}
-               >{gameCell4}
-            </div>
-         </div>
-         <div className='memory-submit-btn'>
-            <button>Submit</button>
-         </div>
-      
+            <GamePattern />
       </>
    )
 }
 
 export default Gameboard
+
+
