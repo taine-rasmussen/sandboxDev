@@ -12,25 +12,23 @@ const Gameboard = () => {
    const [pattern, setPattern] = useState([])
 
 
-    // Takes generated pattern and addeds it to nested array with id's attached
+   // Takes generated pattern and addeds it to nested array with id's attached
    const sortData = () => {
       gridPattern.forEach((cell, index) => {  
         pattern.push({id: index, pattern: cell, style: {backgroundColor: '#fff'}})
       })
    }
 
-
-
    // Updates changeView after 5secs changing the component rendered to GameInput - Creates and displays pattern
    const createPattern = () => {
       setChangeGrid(true)
       sortData()
-      setInterval(function () {setChangeView(true)}, 500);
+      setInterval(function () {setChangeView(true)}, 1500);
    }
 
    return(
       <>
-      {changeView ? <GameInput pattern={pattern}/> : 
+      {changeView ? <GameInput pattern={pattern} setPattern={setPattern}/> : 
          <div className='memory-game-container'>
             {changeGrid ? gridPattern.map((cell, index) => {
                return(
