@@ -10,12 +10,17 @@ const Gameboard = () => {
    const [emptyGrid, setEmptyGrid] = useState([[], [], [], [], [], [], [], [], []])
    const [gridPattern, setGridPattern] = useState([[Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)]])
    const [pattern, setPattern] = useState([])
+   const [winningGrid, setWinningGrid] = useState([])
+
 
 
    // Takes generated pattern and addeds it to nested array with id's attached
    const sortData = () => {
       gridPattern.forEach((cell, index) => {  
         pattern.push({id: index, pattern: cell, style: {backgroundColor: '#fff'}})
+      })
+      pattern.forEach((cell) => {
+         winningGrid.push([cell.pattern[0]])
       })
    }
 
@@ -28,7 +33,7 @@ const Gameboard = () => {
 
    return(
       <>
-      {changeView ? <GameInput pattern={pattern} setPattern={setPattern}/> : 
+      {changeView ? <GameInput pattern={pattern} winningGrid={winningGrid}/> : 
          <div className='memory-game-container'>
             {changeGrid ? gridPattern.map((cell, index) => {
                return(
