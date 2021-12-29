@@ -1,21 +1,26 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 
 // Components
 import GameInput from './GameInput'
 
 const Gameboard = () => {
 
+   const [pattern, setPattern] = useState([])
+   const [winningGrid, setWinningGrid] = useState([])
    const [changeView, setChangeView] = useState(false)
    const [changeGrid, setChangeGrid] = useState(false)
    const [emptyGrid, setEmptyGrid] = useState([[], [], [], [], [], [], [], [], []])
    const [gridPattern, setGridPattern] = useState([[Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)]])
-   const [pattern, setPattern] = useState([])
 
 
    // Takes generated pattern and addeds it to nested array with id's attached
    const sortData = () => {
       gridPattern.forEach((cell, index) => {  
         pattern.push({id: index, pattern: cell, style: {backgroundColor: '#fff'}})
+      })
+      
+      pattern.forEach((cell) => {
+         winningGrid.push([cell.pattern[0]])
       })
    }
 
@@ -28,7 +33,7 @@ const Gameboard = () => {
 
    return(
       <>
-      {changeView ? <GameInput pattern={pattern} setPattern={setPattern}/> : 
+      {changeView ? <GameInput pattern={pattern} winningGrid={winningGrid} setChangeGrid={setChangeGrid}/> : 
          <div className='memory-game-container'>
             {changeGrid ? gridPattern.map((cell, index) => {
                return(

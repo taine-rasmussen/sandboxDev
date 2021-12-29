@@ -12,7 +12,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   width: 318px;
-  border: 3px solid rgb(22, 196, 115);
+  justify-content: center;
 }
 
 .memory-game-cell {
