@@ -4,7 +4,7 @@ const GameInput = ({pattern, winningGrid, resetGame}) => {
 
    const [gameHeader, setGameHeader] = useState('')
 
-   let gameTracker = [[1], [1], [1], [1], [1], [1], [1], [1], [1]]
+   let gameTracker = [[1], [1], [1], [1], [1], [1], [1], [1], [1], [1], [1], [1], [1], [1], [1], [1], [1], [1], [1], [1], [1], [1], [1], [1], [1]]
 
    // Function used on player click checking win conditions & updating game header on win or loss
    const checkForWin = () => {
@@ -41,7 +41,7 @@ const GameInput = ({pattern, winningGrid, resetGame}) => {
    }
 
 
-
+console.log('testing', gameTracker)
    return ( 
       <>
          <h1>{gameHeader}</h1>
