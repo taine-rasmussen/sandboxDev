@@ -5,23 +5,48 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #f2ffe9;
+}
+
+.memory-container h1 {
+  font-size: 3rem;
+  color: #2d4263;
+  margin: 0;
 }
 
 .memory-game-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 300px;
+  width: 660px;
   justify-content: center;
 }
 
 .memory-game-cell {
-  border: 3px solid rgb(22, 196, 115);
-  width: 50px;
-  height: 50px;
+  border: 3px solid #557c55;
+  border-radius: 5px;
+  width: 100px;
+  height: 100px;
+  margin: 5px;
 }
 
-.memory-submit-btn button {
-  margin-top: 1rem;
-  padding: 20px;
+.cell-hover:hover {
+  border: 3px solid #daa5bb;
+  transform: scale(1.01);
+}
+
+.memory-container button {
+  border: 3px solid #557c55;
+  border-radius: 5px;
+  margin-top: 2rem;
+  padding: 15px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #2d4263;
+  background-color: #a6cf98;
+}
+
+.memory-container button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
 }

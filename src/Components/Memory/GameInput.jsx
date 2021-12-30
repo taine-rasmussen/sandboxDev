@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import './Memory.css'
 
 const GameInput = ({pattern, winningGrid, resetGame}) => {
 
@@ -31,7 +32,7 @@ const GameInput = ({pattern, winningGrid, resetGame}) => {
    // Checks if cell was part of pattern and changes bg if true else triggers gameover header to appear
    const handleClick = (id) => {  
      if(document.getElementById(`${id}`) && pattern[id].pattern == 0){
-      document.getElementById(`${id}`).style.background = '#000'
+      document.getElementById(`${id}`).style.background = '#DB6B97'
       gameTracker[id] = [0]
       checkForWin()
      }
@@ -40,8 +41,6 @@ const GameInput = ({pattern, winningGrid, resetGame}) => {
      }
    }
 
-
-console.log('testing', gameTracker)
    return ( 
       <>
          <h1>{gameHeader}</h1>
@@ -49,7 +48,7 @@ console.log('testing', gameTracker)
             {pattern.map((cell, index) => {
                return(
                   <div 
-                     className="memory-game-cell"
+                     className="memory-game-cell cell-hover"
                      key={index}
                      id={cell.id}
                      style={cell.style}

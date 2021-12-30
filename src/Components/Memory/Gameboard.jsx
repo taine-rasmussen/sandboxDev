@@ -1,7 +1,12 @@
 import React, { useState } from 'react'
 
+
 // Components
 import GameInput from './GameInput'
+
+
+
+// Strech idea: Before player has selected create pattern the grid should randomly change colour of cell backgrounds until create pattern is selected.
 
 const Gameboard = () => {
 
@@ -16,7 +21,7 @@ const Gameboard = () => {
    // Takes generated pattern and addeds it to nested array with id's attached
    const sortData = () => {
       gridPattern.forEach((cell, index) => {  
-        pattern.push({id: index, pattern: cell, style: {backgroundColor: '#fff'}})
+        pattern.push({id: index, pattern: cell, style: {backgroundColor: '#A6CF98'}})
       })
 
       pattern.forEach((cell) => {
@@ -30,8 +35,7 @@ const Gameboard = () => {
       sortData()
    }
 
-
-
+   // Resets the game???
    const resetGame = () => {
          setPattern([])
          setWinningGrid([])
@@ -50,7 +54,7 @@ const Gameboard = () => {
                   <div 
                      className="memory-game-cell"
                      key={index}
-                     style={cell != 1 ? {backgroundColor: '#000'} : {backgroundColor: '#fff'}}
+                     style={cell != 1 ? {backgroundColor: '#DB6B97'} : {backgroundColor: '#A6CF98'}}
                   ></div>
 
                   </>
@@ -61,12 +65,12 @@ const Gameboard = () => {
                   <div 
                      className="memory-game-cell"
                      key={index}
-                     style={{backgroundColor: '#fff'}}
+                     style={{backgroundColor: '#A6CF98'}}
                   ></div> 
                )
             })}
          {changeGrid ? null : <button onClick={createPattern}>Create Pattern!</button>}             
-         {changeGrid ? <button onClick={() => {setChangeView(!changeView)}}>attempt pattern</button> : null}
+         {changeGrid ? <button onClick={() => {setChangeView(!changeView)}}>Attempt pattern</button> : null}
          </div>
       }  
       </>
