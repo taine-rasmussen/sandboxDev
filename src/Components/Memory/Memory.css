@@ -8,6 +8,12 @@
   background-color: #f2ffe9;
 }
 
+.memory-container h1 {
+  font-size: 3rem;
+  color: #2d4263;
+  margin: 0;
+}
+
 .memory-game-container {
   display: flex;
   flex-direction: row;
@@ -25,10 +31,22 @@
 }
 
 .cell-hover:hover {
-  background-color: #daa5bb !important;
+  border: 3px solid #daa5bb;
+  transform: scale(1.01);
 }
 
-.memory-submit-btn button {
-  margin-top: 1rem;
-  padding: 20px;
+.memory-container button {
+  border: 3px solid #557c55;
+  border-radius: 5px;
+  margin-top: 2rem;
+  padding: 15px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #2d4263;
+  background-color: #a6cf98;
+}
+
+.memory-container button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
 }

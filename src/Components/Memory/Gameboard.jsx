@@ -4,6 +4,10 @@ import React, { useState } from 'react'
 // Components
 import GameInput from './GameInput'
 
+
+
+// Strech idea: Before player has selected create pattern the grid should randomly change colour of cell backgrounds until create pattern is selected.
+
 const Gameboard = () => {
 
    const [pattern, setPattern] = useState([])
@@ -31,8 +35,7 @@ const Gameboard = () => {
       sortData()
    }
 
-
-
+   // Resets the game???
    const resetGame = () => {
          setPattern([])
          setWinningGrid([])
@@ -67,7 +70,7 @@ const Gameboard = () => {
                )
             })}
          {changeGrid ? null : <button onClick={createPattern}>Create Pattern!</button>}             
-         {changeGrid ? <button onClick={() => {setChangeView(!changeView)}}>attempt pattern</button> : null}
+         {changeGrid ? <button onClick={() => {setChangeView(!changeView)}}>Attempt pattern</button> : null}
          </div>
       }  
       </>
