@@ -1,10 +1,10 @@
 import React, {useState} from 'react'
 
-const GameInput = ({pattern, winningGrid}) => {
+const GameInput = ({pattern, winningGrid, resetGame}) => {
 
    const [gameHeader, setGameHeader] = useState('')
 
-   let gameTracker = [[1], [1], [1], [1], [1], [1], [1], [1], [1]]
+   let gameTracker = [[1], [1], [1], [1], [1], [1], [1], [1], [1], [1], [1], [1], [1], [1], [1], [1], [1], [1], [1], [1], [1], [1], [1], [1], [1]]
 
    // Function used on player click checking win conditions & updating game header on win or loss
    const checkForWin = () => {
@@ -40,6 +40,8 @@ const GameInput = ({pattern, winningGrid}) => {
      }
    }
 
+
+console.log('testing', gameTracker)
    return ( 
       <>
          <h1>{gameHeader}</h1>
@@ -57,6 +59,8 @@ const GameInput = ({pattern, winningGrid}) => {
                )
             })}
          </div>
+
+         <button onClick={resetGame}>Reset Game</button>
       </>
    )
 }

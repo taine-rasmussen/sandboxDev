@@ -9,8 +9,8 @@ const Gameboard = () => {
    const [winningGrid, setWinningGrid] = useState([])
    const [changeView, setChangeView] = useState(false)
    const [changeGrid, setChangeGrid] = useState(false)
-   const [emptyGrid, setEmptyGrid] = useState([[], [], [], [], [], [], [], [], []])
-   const [gridPattern, setGridPattern] = useState([[Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)]])
+   const [emptyGrid, setEmptyGrid] = useState([[], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []])
+   const [gridPattern, setGridPattern] = useState([[Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)],[Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)]])
 
 
    // Takes generated pattern and addeds it to nested array with id's attached
@@ -18,7 +18,7 @@ const Gameboard = () => {
       gridPattern.forEach((cell, index) => {  
         pattern.push({id: index, pattern: cell, style: {backgroundColor: '#fff'}})
       })
-      
+
       pattern.forEach((cell) => {
          winningGrid.push([cell.pattern[0]])
       })
@@ -28,20 +28,32 @@ const Gameboard = () => {
    const createPattern = () => {
       setChangeGrid(true)
       sortData()
-      setInterval(function () {setChangeView(true)}, 1500);
    }
+
+
+
+   const resetGame = () => {
+         setPattern([])
+         setWinningGrid([])
+         setChangeView(!changeView)
+         setChangeGrid(!changeGrid)
+         setGridPattern([[Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)],[Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)]])
+      }
 
    return(
       <>
-      {changeView ? <GameInput pattern={pattern} winningGrid={winningGrid} setChangeGrid={setChangeGrid}/> : 
+      {changeView ? <GameInput pattern={pattern} winningGrid={winningGrid} resetGame={resetGame}/> : 
          <div className='memory-game-container'>
             {changeGrid ? gridPattern.map((cell, index) => {
                return(
+                  <>
                   <div 
                      className="memory-game-cell"
                      key={index}
                      style={cell != 1 ? {backgroundColor: '#000'} : {backgroundColor: '#fff'}}
                   ></div>
+
+                  </>
                )
             }) 
             : emptyGrid.map((cell, index) => {
@@ -53,7 +65,8 @@ const Gameboard = () => {
                   ></div> 
                )
             })}
-         {changeGrid ? null : <button onClick={createPattern}>Create Pattern!</button>}
+         {changeGrid ? null : <button onClick={createPattern}>Create Pattern!</button>}             
+         {changeGrid ? <button onClick={() => {setChangeView(!changeView)}}>attempt pattern</button> : null}
          </div>
       }  
       </>

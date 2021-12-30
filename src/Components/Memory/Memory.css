@@ -11,14 +11,14 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 318px;
+  width: 300px;
   justify-content: center;
 }
 
 .memory-game-cell {
   border: 3px solid rgb(22, 196, 115);
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
 }
 
 .memory-submit-btn button {
