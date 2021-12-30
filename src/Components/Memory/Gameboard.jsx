@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 
+
 // Components
 import GameInput from './GameInput'
 
@@ -16,7 +17,7 @@ const Gameboard = () => {
    // Takes generated pattern and addeds it to nested array with id's attached
    const sortData = () => {
       gridPattern.forEach((cell, index) => {  
-        pattern.push({id: index, pattern: cell, style: {backgroundColor: '#fff'}})
+        pattern.push({id: index, pattern: cell, style: {backgroundColor: '#A6CF98'}})
       })
 
       pattern.forEach((cell) => {
@@ -50,7 +51,7 @@ const Gameboard = () => {
                   <div 
                      className="memory-game-cell"
                      key={index}
-                     style={cell != 1 ? {backgroundColor: '#000'} : {backgroundColor: '#fff'}}
+                     style={cell != 1 ? {backgroundColor: '#DB6B97'} : {backgroundColor: '#A6CF98'}}
                   ></div>
 
                   </>
@@ -61,7 +62,7 @@ const Gameboard = () => {
                   <div 
                      className="memory-game-cell"
                      key={index}
-                     style={{backgroundColor: '#fff'}}
+                     style={{backgroundColor: '#A6CF98'}}
                   ></div> 
                )
             })}
