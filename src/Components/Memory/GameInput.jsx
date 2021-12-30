@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-const GameInput = ({pattern, winningGrid}) => {
+const GameInput = ({pattern, winningGrid, resetGame}) => {
 
    const [gameHeader, setGameHeader] = useState('')
 
@@ -40,6 +40,8 @@ const GameInput = ({pattern, winningGrid}) => {
      }
    }
 
+
+
    return ( 
       <>
          <h1>{gameHeader}</h1>
@@ -57,6 +59,8 @@ const GameInput = ({pattern, winningGrid}) => {
                )
             })}
          </div>
+
+         <button onClick={resetGame}>Reset Game</button>
       </>
    )
 }

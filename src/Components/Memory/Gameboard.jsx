@@ -18,7 +18,7 @@ const Gameboard = () => {
       gridPattern.forEach((cell, index) => {  
         pattern.push({id: index, pattern: cell, style: {backgroundColor: '#fff'}})
       })
-      
+
       pattern.forEach((cell) => {
          winningGrid.push([cell.pattern[0]])
       })
@@ -28,20 +28,29 @@ const Gameboard = () => {
    const createPattern = () => {
       setChangeGrid(true)
       sortData()
-      setInterval(function () {setChangeView(true)}, 1500);
    }
+
+      const resetGame = () => {
+         setPattern([])
+         setGridPattern([[Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)]])
+         setChangeView(!changeView)
+         setChangeGrid(!changeGrid)
+      }
 
    return(
       <>
-      {changeView ? <GameInput pattern={pattern} winningGrid={winningGrid} setChangeGrid={setChangeGrid}/> : 
+      {changeView ? <GameInput pattern={pattern} winningGrid={winningGrid} resetGame={resetGame}/> : 
          <div className='memory-game-container'>
             {changeGrid ? gridPattern.map((cell, index) => {
                return(
+                  <>
                   <div 
                      className="memory-game-cell"
                      key={index}
                      style={cell != 1 ? {backgroundColor: '#000'} : {backgroundColor: '#fff'}}
                   ></div>
+
+                  </>
                )
             }) 
             : emptyGrid.map((cell, index) => {
@@ -53,7 +62,8 @@ const Gameboard = () => {
                   ></div> 
                )
             })}
-         {changeGrid ? null : <button onClick={createPattern}>Create Pattern!</button>}
+         {changeGrid ? null : <button onClick={createPattern}>Create Pattern!</button>}             
+         {changeGrid ? <button onClick={() => {setChangeView(!changeView)}}>attempt pattern</button> : null}
          </div>
       }  
       </>
