@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 
 
 // Components
@@ -28,6 +28,9 @@ const Gameboard = () => {
          winningGrid.push([cell.pattern[0]])
       })
    }
+
+
+
    
    // Updates changeView after 5secs changing the component rendered to GameInput - Creates and displays pattern
    const createPattern = () => {
