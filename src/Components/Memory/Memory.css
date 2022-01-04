@@ -35,6 +35,11 @@
   transform: scale(1.01);
 }
 
+.empty-hover:hover {
+  background-color: #daa5bb !important;
+  transform: scale(1.01);
+}
+
 .memory-container button {
   border: 3px solid #557c55;
   border-radius: 5px;
