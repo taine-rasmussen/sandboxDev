@@ -1,18 +1,23 @@
 import React, { useState } from 'react'
 import './Gameboard.css'
+import thisIsStupid from './dontLookInHere'
 
-
+// 0 === empty cell 
+// 1 === filled cell
 
 const Gameboard = () => {
 
-   const [cells, setCells] = useState(Array(200).fill(['empty']))
-   const greyBg = {backgroundColor: '#A9A9A9'}
+   const [cells, setCells] = useState(thisIsStupid)
+
 
 
    const createShape = () => {
-      
+      cells.map((cell) => {
+         if(cell.id == 0){
+            return cell.status = 1
+         }
+      })
    }
-
 
    return (
       <div className="gameboard-container">
@@ -22,15 +27,16 @@ const Gameboard = () => {
                   return(
                      <div 
                         key={index} 
+                        id={cell.id}
                         className="gameboard-cell"
-                        style={cell == 'empty' ? greyBg : {backgroundColor: 'blue'}}
+                        style={cell.style}
                      >{cell[1]}   
                   </div>
                   )
                })}
             </div>
          </div>
-         <button>?????</button>
+         <button onClick={createShape}>?????</button>
       </div>
    )
 }
