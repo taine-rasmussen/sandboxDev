@@ -14,6 +14,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px 50px;
 }
 
 .gameboard-game {
@@ -27,8 +28,8 @@
 
 .gameboard-cell {
   width: 20px;
-  heigth: 0px;
+  height: 0px;
   padding: 10px 3.333px;
   border: 2px solid #000;
-  margin: 0.555px;
+  margin: 0.5px;
 }

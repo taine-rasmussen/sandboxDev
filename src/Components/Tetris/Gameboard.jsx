@@ -5,10 +5,13 @@ import './Gameboard.css'
 
 const Gameboard = () => {
 
-   const gameCell = <div></div>
-   const [cells, setCells] = useState(Array(200).fill(gameCell))
+   const [cells, setCells] = useState(Array(200).fill(['empty']))
+   const greyBg = {backgroundColor: '#A9A9A9'}
 
 
+   const createShape = () => {
+      
+   }
 
 
    return (
@@ -17,11 +20,17 @@ const Gameboard = () => {
             <div className="gameboard-game">
                {cells.map((cell, index) => {
                   return(
-                     <div key={index} className="gameboard-cell">{cell}</div>
+                     <div 
+                        key={index} 
+                        className="gameboard-cell"
+                        style={cell == 'empty' ? greyBg : {backgroundColor: 'blue'}}
+                     >{cell[1]}   
+                  </div>
                   )
                })}
             </div>
          </div>
+         <button>?????</button>
       </div>
    )
 }

@@ -15,7 +15,7 @@ const Gameboard = () => {
    const [emptyGrid, setEmptyGrid] = useState([[], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []])
    const [gridPattern, setGridPattern] = useState([[Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)],[Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)], [Math.floor(Math.random() * 2)]])
 
-
+   
    
    
    // Takes generated pattern and addeds it to nested array with id's attached
@@ -60,7 +60,7 @@ const Gameboard = () => {
                   <div 
                      className="memory-game-cell"
                      key={index}
-                     style={cell != 1 ? {backgroundColor: '#DB6B97'} : {backgroundColor: '#A6CF98'}}
+                     style={cell !== 1 ? {backgroundColor: '#DB6B97'} : {backgroundColor: '#A6CF98'}}
                   ></div>
 
                   </>
