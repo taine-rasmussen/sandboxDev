@@ -11,13 +11,9 @@
   width: 100%;
 }
 
-.landing-header span {
-  letter-spacing: -12px;
-  font-size: 6rem;
-}
-
 .landing-header h1 {
-  font-size: 5rem;
+  letter-spacing: -16px;
+  font-size: 8rem;
 }
 
 .landing-links-container {

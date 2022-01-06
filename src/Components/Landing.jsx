@@ -9,7 +9,7 @@ const Landing = () => {
    return (
       <div className="landing-container">
          <div className="landing-header">
-            <h1>Welcome to the <span>Sandbox</span></h1>
+            <h1>Sandbox</h1>
          </div>
             <div className="landing-links-container">
             {projects.map((projName, index) => {
