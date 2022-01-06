@@ -12,11 +12,10 @@ const Gameboard = () => {
 
 
    const createShape = () => {
-      cells.map((cell) => {
-         if(cell.id == 0){
-            return cell.status = 1
-         }
-      })
+
+console.log(cells)
+
+     
    }
 
    return (
