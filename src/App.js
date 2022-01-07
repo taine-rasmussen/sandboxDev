@@ -8,6 +8,7 @@ import Login from './Components/Login/Login'
 import Hero from './Components/Hero/Hero'
 import Gameboard from './Components/Tetris/Gameboard'
 import Memory from './Components/Memory/Memory'
+import Game from './Components/Conway/Game'
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route exact path='/hero' element={<Hero />}/>
         <Route exact path='/tetirs' element={<Gameboard />}/>
         <Route exact path='/memory' element={<Memory />}/>
+        <Route exact path='/conway' element={<Game />}/>
       </Routes>
     </div>
   );
