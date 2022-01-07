@@ -1,5 +1,6 @@
-import React, {useState}  from 'react'
-import './Conway.css'
+import React, {useState}  from 'react';
+import produce from 'immer';
+import './Conway.css';
 
 
 const Game = () => {
@@ -27,9 +28,16 @@ const Game = () => {
       <div className="game-container">
          <div className="game-area"  style={{display: 'grid', gridTemplateColumns: `repeat(${numCols}, 20px)`}}>
             {grid.map((rows, i) => 
-               rows.map((col, k) => (
+               rows.map((col, k) =>
+                (
                   <div 
                      key={`${i}-${k}`}
+                     onClick={() => { 
+                        const newGrid = produce(grid, gridCopy => {
+                           gridCopy[i][k] = gridCopy[i][k] ? 0 : 1;
+                        })
+                        setGrid(newGrid)
+                     }}
                      style={{
                         width: 20,
                         height: 20,
