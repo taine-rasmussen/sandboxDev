@@ -1,9 +1,12 @@
 import React from 'react'
 
-const Scoreboard = () => {
+const Scoreboard = ({scoreTracker}) => {
+
+
    return (
       <div className="scoreboard-container">
-         asdfasdf
+         <h3>X: {scoreTracker.x}</h3>
+         <h3>O: {scoreTracker.o}</h3>
       </div>
    )
 }

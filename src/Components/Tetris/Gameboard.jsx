@@ -12,6 +12,7 @@ const Gameboard = () => {
    const [toggleMove, setToggleMove] = useState(true)
    const [gameState, setGameState] = useState(false)
    const [header, setHeader] = useState('Tic-Tac-Toe')
+   const [scoreTracker, setScoreTracker] = useState({x: 0, o: 0})
    const [gameTracker, setGameTracker] = useState(
       [[], [], [],
       [], [], [],
@@ -20,50 +21,50 @@ const Gameboard = () => {
    // Checks win conditions across all rows for both players
    const checkForWinRow = () => {
       if (gameTracker[0] === 'X' && gameTracker[1] === 'X' && gameTracker[2] === 'X'){
-         return setGameState(true), setHeader('X won this round')
+         return setGameState(true), setHeader('X won this round'), scoreTracker.x++
       } else if (gameTracker[0] === 'O' && gameTracker[1] === 'O' && gameTracker[2] === 'O') {
-         return setGameState(true), setHeader('O won this round')
+         return setGameState(true), setHeader('O won this round'), scoreTracker.o++
       } 
       else if (gameTracker[3] === 'X' && gameTracker[4] === 'X' && gameTracker[5] === 'X'){
-        return setGameState(true), setHeader('X won this round')
+        return setGameState(true), setHeader('X won this round'), scoreTracker.x++
       } else if (gameTracker[3] === 'O' && gameTracker[4] === 'O' && gameTracker[5] === 'O') {
-         return setGameState(true), setHeader('O won this round')
+         return setGameState(true), setHeader('O won this round'),  scoreTracker.o++
       }
       else if (gameTracker[6] === 'X' && gameTracker[7] === 'X' && gameTracker[8] === 'X'){
-        return setGameState(true), setHeader('X won this round')
+        return setGameState(true), setHeader('X won this round'), scoreTracker.x++
       } else if (gameTracker[6] === 'O' && gameTracker[7] === 'O' && gameTracker[8] === 'O') {
-         return setGameState(true), setHeader('O won this round')
+         return setGameState(true), setHeader('O won this round'),  scoreTracker.o++
       }
    }
    // Checks win conditions across all cols for both players
    const checkForWinCol = () => {
       if (gameTracker[0] === 'X' && gameTracker[3] === 'X' && gameTracker[6] === 'X'){
-        return setGameState(true), setHeader('X won this round')
+        return setGameState(true), setHeader('X won this round'), scoreTracker.x++
       } else if (gameTracker[0] === 'O' && gameTracker[3] === 'O' && gameTracker[6] === 'O') {
-         return setGameState(true), setHeader('O won this round')
+         return setGameState(true), setHeader('O won this round'),  scoreTracker.o++
       } 
       else if (gameTracker[1] === 'X' && gameTracker[4] === 'X' && gameTracker[7] === 'X'){
-        return setGameState(true), setHeader('X won this round')
+        return setGameState(true), setHeader('X won this round'), scoreTracker.x++
       } else if (gameTracker[1] === 'O' && gameTracker[4] === 'O' && gameTracker[7] === 'O') {
-         return setGameState(true), setHeader('O won this round')
+         return setGameState(true), setHeader('O won this round'),  scoreTracker.o++
       }
       else if (gameTracker[2] === 'X' && gameTracker[5] === 'X' && gameTracker[8] === 'X'){
-        return setGameState(true), setHeader('X won this round')
+        return setGameState(true), setHeader('X won this round'), scoreTracker.x++
       } else if (gameTracker[2] === 'O' && gameTracker[5] === 'O' && gameTracker[8] === 'O') {
-         return setGameState(true), setHeader('O won this round')
+         return setGameState(true), setHeader('O won this round'),  scoreTracker.o++
       }
    }
    // Checks win conditions across all diagonals for both players
    const checkForWinDia = () => {
       if (gameTracker[0] === 'X' && gameTracker[4] === 'X' && gameTracker[8] === 'X'){
-        return setGameState(true), setHeader('X won this round')
+        return setGameState(true), setHeader('X won this round'), scoreTracker.x++
       } else if (gameTracker[0] === 'O' && gameTracker[4] === 'O' && gameTracker[8] === 'O') {
-         return setGameState(true), setHeader('O won this round')
+         return setGameState(true), setHeader('O won this round'),  scoreTracker.o++
       } 
       else if (gameTracker[2] === 'X' && gameTracker[4] === 'X' && gameTracker[6] === 'X'){
-        return setGameState(true), setHeader('X won this round')
+        return setGameState(true), setHeader('X won this round'), scoreTracker.x++
       } else if (gameTracker[2] === 'O' && gameTracker[4] === 'O' && gameTracker[6] === 'O') {
-         return setGameState(true), setHeader('O won this round')
+         return setGameState(true), setHeader('O won this round'),  scoreTracker.o++
       }
    }
 
@@ -114,10 +115,11 @@ const Gameboard = () => {
      })
    }
 
+
    return (
       <div className="tictactoe-container">
          <div className='scoreboard-container'>
-            <Scoreboard />
+            <Scoreboard scoreTracker={scoreTracker}/>
          </div>
          <div className="gameboard-container">
             <h1>{header}</h1>
