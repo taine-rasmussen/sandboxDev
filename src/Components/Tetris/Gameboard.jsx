@@ -11,7 +11,7 @@ const Gameboard = () => {
    const [gameTracker, setGameTracker] = useState(
       [[], [], [],
       [], [], [],
-      [], [], []],)
+      [], [], []])
 
    // Checks win conditions across all rows for both players
    const checkForWinRow = () => {
@@ -75,6 +75,17 @@ const Gameboard = () => {
             setHeader(`It's a draw`)
          } 
    }
+
+   const resetGame = () => {
+      setToggleMove(true)
+      setGameState(false)
+      setHeader('Tic-Tac-Toe')
+      setGameTracker(
+      [[], [], [],
+      [], [], [],
+      [], [], []])
+      setGrid([{id: 0, state: false, value: ''}, {id: 1, state: false, value: ''}, {id: 2, state: false, value: ''}, {id: 3, state: false, value: ''}, {id: 4, state: false, value: ''}, {id: 5, state: false, value: ''}, {id: 6, state: false, value: ''}, {id: 7, state: false, value: ''}, {id: 8, state: false, value: ''},])
+   }
    
 
 
@@ -120,6 +131,7 @@ const Gameboard = () => {
                >{cell.value}</div>
             ))}
          </div>
+         <button onClick={resetGame }>Reset</button>
       </div>
    )
 }
