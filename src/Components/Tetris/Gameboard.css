@@ -16,5 +16,6 @@
   .gameboard-cell {
     height: 100px !important;
     width: 100px !important;
+    font-size: 4rem !important;
   }
 }
