@@ -1,6 +1,10 @@
 import React, {useState} from 'react'
 import './Gameboard.css'
 
+
+// Components
+import Scoreboard from './Scoreboard'
+
 const Gameboard = () => {
 
    const [grid, setGrid] = useState([{id: 0, state: false, value: ''}, {id: 1, state: false, value: ''}, {id: 2, state: false, value: ''}, {id: 3, state: false, value: ''}, {id: 4, state: false, value: ''}, {id: 5, state: false, value: ''}, {id: 6, state: false, value: ''}, {id: 7, state: false, value: ''}, {id: 8, state: false, value: ''},])
@@ -111,27 +115,32 @@ const Gameboard = () => {
    }
 
    return (
-      <div className="gameboard-container">
-         <h1>{header}</h1>
-         <div className="gameboard-area">
-            {grid.map((cell) => (
-               <div 
-                  key={cell.id}
-                  className="gameboard-cell"
-                  style={{
-                     display: 'flex',
-                     justifyContent: 'center',
-                     alignItems: 'center',
-                     fontSize: '7rem',
-                     border: '1px solid #000',
-                     width: 150,
-                     height: 150,
-                  }}
-                  onClick={() => handleClick(cell.id)}
-               >{cell.value}</div>
-            ))}
+      <div className="tictactoe-container">
+         <div className='scoreboard-container'>
+            <Scoreboard />
          </div>
-         <button onClick={resetGame }>Reset</button>
+         <div className="gameboard-container">
+            <h1>{header}</h1>
+            <div className="gameboard-area">
+               {grid.map((cell) => (
+                  <div 
+                     key={cell.id}
+                     className="gameboard-cell"
+                     style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        fontSize: '7rem',
+                        border: '1px solid #000',
+                        width: 115,
+                        height: 115,
+                     }}
+                     onClick={() => handleClick(cell.id)}
+                  >{cell.value}</div>
+               ))}
+            </div>
+            <button onClick={resetGame }>Reset</button>
+         </div>
       </div>
    )
 }
