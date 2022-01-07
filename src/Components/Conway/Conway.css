@@ -1,9 +1,13 @@
 .game-container {
   width: 100vw;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .game-area {
+  width: 75vw;
   display: flex;
   flex-wrap: wrap;
 }

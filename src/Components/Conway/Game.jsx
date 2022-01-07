@@ -4,8 +4,11 @@ import './Conway.css'
 
 const Game = () => {
    
-   const numRows = 30
-   const numCols = 30
+   const numRows = 60
+   const numCols = 60
+
+
+
    
    const [grid, setGrid] = useState()
    
@@ -14,7 +17,7 @@ const Game = () => {
       let grid = [];
          for (let i = 0; i < numRows; i++) {
             let row = [];
-         for(let j = 0; j < numCols; j++) {
+         for(let k = 0; k < numCols; k++) {
             row.push(0)
          }
             grid.push(row)
@@ -35,8 +38,8 @@ const Game = () => {
                grid.map((rows, i) =>
                rows.map((col, k) => (
                   <div key={k} style={{
-                     width: 30,
-                     height: 30,
+                     width: 10,
+                     height: 10,
                      backgroundColor: grid[i][k] ? "green" : "",
                      border: "1px solid black",
                   }}/>
