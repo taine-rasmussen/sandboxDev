@@ -1,4 +1,4 @@
-import React, {useState}  from 'react';
+import React, {useState, useCallback}  from 'react';
 import produce from 'immer';
 import './Conway.css';
 
@@ -7,8 +7,7 @@ const Game = () => {
    
    const numRows = 30
    const numCols = 30
-
-
+   
    // Creates array gird based of dimensions of above varibles 
    const createGrid = () => {
       const rows = [];
@@ -18,11 +17,13 @@ const Game = () => {
       return rows;
    }
 
-   
+   const [running, setRunning] = useState(false)
    const [grid, setGrid] = useState(() => {
       return createGrid()
    })
-   const [running, setRunning] = useState(false)
+   
+
+
    
 
    return (

@@ -7,29 +7,14 @@
 }
 
 .gameboard-area {
-  width: 33.333%;
-  height: 75%;
-  border: 5px solid #000;
-  border-radius: 15px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 50px;
-}
-
-.gameboard-game {
-  width: 320px;
-  height: max-content;
-  display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  width: 33.333%;
 }
 
-.gameboard-cell {
-  width: 20px;
-  height: 0px;
-  padding: 10px 3.333px;
-  border: 2px solid #000;
-  margin: 0.5px;
+@media only screen and (max-width: 1100px) {
+  .gameboard-cell {
+    height: 100px !important;
+    width: 100px !important;
+  }
 }
