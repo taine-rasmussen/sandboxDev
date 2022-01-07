@@ -5,9 +5,3 @@
   justify-content: center;
   align-items: center;
 }
-
-.game-area {
-  width: 75vw;
-  display: flex;
-  flex-wrap: wrap;
-}
