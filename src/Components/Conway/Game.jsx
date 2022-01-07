@@ -22,10 +22,12 @@ const Game = () => {
    const [grid, setGrid] = useState(() => {
       return createGrid()
    })
+   const [running, setRunning] = useState(false)
    
 
    return (
       <div className="game-container">
+         <button onClick={() => {setRunning(!running)}}>{running ? 'Stop' : 'Start'}</button>
          <div className="game-area"  style={{display: 'grid', gridTemplateColumns: `repeat(${numCols}, 20px)`}}>
             {grid.map((rows, i) => 
                rows.map((col, k) =>
