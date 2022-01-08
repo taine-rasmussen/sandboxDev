@@ -104,13 +104,17 @@ const Gameboard = () => {
       }
      grid.map((cell) => {
         if(cell.id == id){
-         setGrid([...grid], cell.value = move)
-         setToggleMove(!toggleMove)
-         gameTracker[id] = move
-         checkForDraw()
-         checkForWinRow()
-         checkForWinCol()
-         checkForWinDia()
+           if(cell.value == 'X' || cell.value == 'O'){
+              return;
+           } else {
+              setGrid([...grid], cell.value = move)
+              setToggleMove(!toggleMove)
+              gameTracker[id] = move
+              checkForDraw()
+              checkForWinRow()
+              checkForWinCol()
+              checkForWinDia()
+           }
         }
      })
    }
