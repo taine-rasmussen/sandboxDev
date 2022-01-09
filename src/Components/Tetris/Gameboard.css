@@ -35,7 +35,6 @@ button {
   font-weight: bold;
   font-size: 1.5rem;
   margin-top: 1rem;
-  box-shadow: 2px 2px 15px #ccdada;
 }
 
 button:hover {
