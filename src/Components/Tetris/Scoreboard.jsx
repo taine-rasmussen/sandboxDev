@@ -25,18 +25,21 @@ const Scoreboard = ({scoreTracker}) => {
          e.preventDefault()
          setPlayerNameO(input2)
          setPlayerNameX(input)
-         setChangeView(false)
+         setChangeView(!changeView)
+   }
+   const handleEdit = () => {
+         setChangeView(!changeView)
    }
 
 
    return (
       <div className="scoreboard-container">
         <div className="scoreboard-header">
-            <h1>Scoreboard</h1>
+         {changeView == true ? <h1>Set names</h1> : <h1>Scoreboard</h1> }
             <div className="players">
             <form onSubmit={handleSubmit}>
                {
-                  changeView == true ?  <> <input 
+                  changeView == true ?  <div className="input-container"> <input 
                         type="text"
                         placeholder='Player X name...'
                         value={input}
@@ -48,11 +51,14 @@ const Scoreboard = ({scoreTracker}) => {
                         value={input2}
                         onChange={handleChange2}
                      />
-                     <button>Set names</button></> : 
-                     <div>
+                     <button>Set names</button></div> : 
+                     <>
+                     <div className="scoreboard-score">
                         <h4>{`${playerNameX}: ${scoreTracker.x}`}</h4>
-                        <h4>{`${playerNameO}: ${scoreTracker.o}`}</h4>
+                        <h4 className="ml">{`${playerNameO}: ${scoreTracker.o}`}</h4>
                      </div>
+                        <button className="score-btn" onClick={handleEdit}>Edit</button>
+                     </>
                   }
                </form> 
             </div>
