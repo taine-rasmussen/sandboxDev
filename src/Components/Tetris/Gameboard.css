@@ -30,15 +30,17 @@ button {
   border: 3px solid #001f3d;
   border-radius: 7px;
   padding: 5px 10px;
-  color: #ccdada;
-  background-color: #001f3d;
+  color: #001f3d;
+  background-color: #1477b2;
   font-weight: bold;
   font-size: 1.5rem;
   margin-top: 1rem;
+  box-shadow: 2px 2px 15px #ccdada;
 }
 
 button:hover {
   transform: scale(1.1);
+  cursor: pointer;
 }
 
 .gameboard-area {

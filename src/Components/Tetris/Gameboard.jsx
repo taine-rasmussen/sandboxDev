@@ -97,7 +97,6 @@ const Gameboard = () => {
    // updates player move toggle changing value set "X" or "O" and updates gird with new move
    const handleClick = (id) => {
       let move = ''
-
       if(gameState == true){
          return;
       } else {
