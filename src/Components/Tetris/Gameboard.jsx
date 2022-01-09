@@ -136,10 +136,13 @@ const Gameboard = () => {
                         display: 'flex',
                         justifyContent: 'center',
                         alignItems: 'center',
-                        fontSize: '7rem',
-                        border: '1px solid #000',
-                        width: 115,
-                        height: 115,
+                        fontSize: '6rem',
+                        border: '3px solid #001F3D',
+                        borderRadius: '7px',
+                        margin: '0.5rem',
+                        width: 100,
+                        height: 100,
+                        color: '#CCDADA'
                      }}
                      onClick={() => handleClick(cell.id)}
                   >{cell.value}</div>
