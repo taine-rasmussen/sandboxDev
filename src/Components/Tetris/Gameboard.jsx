@@ -97,26 +97,31 @@ const Gameboard = () => {
    // updates player move toggle changing value set "X" or "O" and updates gird with new move
    const handleClick = (id) => {
       let move = ''
-      if(toggleMove == true){
-         move = 'X'
+
+      if(gameState == true){
+         return;
       } else {
-         move = 'O'
-      }
-     grid.map((cell) => {
-        if(cell.id == id){
-           if(cell.value == 'X' || cell.value == 'O'){
-              return;
-           } else {
-              setGrid([...grid], cell.value = move)
-              setToggleMove(!toggleMove)
-              gameTracker[id] = move
-              checkForDraw()
-              checkForWinRow()
-              checkForWinCol()
-              checkForWinDia()
+         if(toggleMove == true){
+            move = 'X'
+         } else {
+            move = 'O'
+         }
+        grid.map((cell) => {
+           if(cell.id == id){
+              if(cell.value == 'X' || cell.value == 'O'){
+                 return;
+              } else {
+                 setGrid([...grid], cell.value = move)
+                 setToggleMove(!toggleMove)
+                 gameTracker[id] = move
+                 checkForDraw()
+                 checkForWinRow()
+                 checkForWinCol()
+                 checkForWinDia()
+              }
            }
-        }
-     })
+        })
+      }
    }
 
 
