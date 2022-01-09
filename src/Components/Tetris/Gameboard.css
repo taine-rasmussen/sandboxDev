@@ -1,6 +1,6 @@
 .tictactoe-container {
-  height: 100vh;
   width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: row;
   margin: 0;
@@ -52,5 +52,51 @@ button:hover {
     height: 70px !important;
     width: 70px !important;
     font-size: 4rem !important;
+  }
+}
+
+/* ------------------- Scoreboard ------------------ */
+.scoreboard-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.scoreboard-header {
+  font-size: 1.5rem;
+  color: #001f3d;
+  border-bottom: 3px solid #001f3d;
+  display: flex;
+  flex-direction: column;
+}
+
+.players {
+  display: flex;
+  flex-direction: row !important;
+  justify-content: space-between;
+}
+
+.scoreboard-scores-container {
+  display: flex;
+  flex-direction: row !important;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.scoreboard-score {
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .tictactoe-container {
+    flex-direction: column-reverse;
+  }
+  .gameboard-container {
+    width: 100%;
+  }
+  .scoreboard-container {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
   }
 }
