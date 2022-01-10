@@ -30,8 +30,8 @@ button {
   border: 3px solid #001f3d;
   border-radius: 7px;
   padding: 5px 10px;
-  color: #ccdada;
-  background-color: #001f3d;
+  color: #001f3d;
+  background-color: #1477b2;
   font-weight: bold;
   font-size: 1.5rem;
   margin-top: 1rem;
@@ -39,6 +39,7 @@ button {
 
 button:hover {
   transform: scale(1.1);
+  cursor: pointer;
 }
 
 .gameboard-area {
@@ -59,12 +60,12 @@ button:hover {
 .scoreboard-container {
   display: flex;
   flex-direction: column;
+  background-color: #1477b2;
 }
 
 .scoreboard-header {
   font-size: 1.5rem;
   color: #001f3d;
-  border-bottom: 3px solid #001f3d;
   display: flex;
   flex-direction: column;
 }
@@ -83,7 +84,40 @@ button:hover {
 }
 
 .scoreboard-score {
-  font-size: 1rem;
+  font-size: 1.2em;
+  display: flex;
+  flex-direction: row !important;
+}
+
+.ml {
+  margin-left: 2rem;
+}
+
+.score-btn {
+  font-size: 1.2rem !important;
+  padding: 1px 1px !important;
+  border: 1px solid #001f3d;
+  border-radius: 7px;
+  padding: 5px 20px !important;
+  font-size: 1.3rem !important;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-container input {
+  background-color: #ccdada;
+  border: 3px solid #ccdada;
+  border-radius: 5px;
+  margin-top: 1rem;
+  color: #001f3d;
+}
+
+.input-container input::placeholder {
+  color: #001f3d;
+  font-size: 1.3rem;
 }
 
 @media only screen and (max-width: 900px) {
