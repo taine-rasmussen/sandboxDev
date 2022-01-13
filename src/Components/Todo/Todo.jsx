@@ -18,8 +18,12 @@ const Todo = () => {
 
    // handles form submit when adding new tasks
    const handleSubmit = () => {
-      todos.push({id: todos.length, value: input})
-      setInput('')
+      if(input.length == 0){
+         return;
+      } else {
+         todos.push({id: todos.length, value: input, completed: false})
+         setInput('')
+      }
    }
 
    const editChange = (e) => {
@@ -28,13 +32,17 @@ const Todo = () => {
    }
 
    function handleEdit(id){
-      todos.map((task) => {
-         if(id == task.id){
-            return task.value = editInput
-         }
-      })
-      setEditView(!editView)
-      setEditInput('')
+      if(editInput.length == 0) {
+         return;
+      } else {
+         todos.map((task) => {
+            if(id == task.id){
+               return task.value = editInput
+            }
+         })
+         setEditView(!editView)
+         setEditInput('')
+      }
    }
 
    // Creats & updates start with new array without including task selected 
@@ -66,7 +74,7 @@ const Todo = () => {
                {todos.map((task) => {
                   return(
                      <div className="todo-single-task" key={task.id}>
-                        <h3>{task.value}</h3>
+                              <h3>{task.value}</h3>
                         {editView ? <>
                            <button onClick={() => handleEdit(task.id)}>Add task</button>
                            <input 
@@ -77,7 +85,9 @@ const Todo = () => {
                            </> : <> 
                               <button onClick={handleEditViewChange}>Edit</button> 
                               <button onClick={() => handleDelete(task.id)}>Delete</button>
-                             </>}
+                              <label>Mark complete</label>
+                              <input type="checkbox"/>
+                           </>}
                      </div>
                   )
                })}
