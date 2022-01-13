@@ -35,6 +35,7 @@ const Todo = () => {
                      type='text'
                      placeholder='Add new task...'
                      onChange={handleChange}
+                     value={input}
                   />
                   <button>Add task</button>
                </form>
