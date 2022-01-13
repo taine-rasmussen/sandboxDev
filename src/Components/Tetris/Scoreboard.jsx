@@ -54,8 +54,8 @@ const Scoreboard = ({scoreTracker}) => {
                      <button>Set names</button></div> : 
                      <>
                      <div className="scoreboard-score">
-                        <h4>{`${playerNameX}: ${scoreTracker.x}`}</h4>
-                        <h4 className="ml">{`${playerNameO}: ${scoreTracker.o}`}</h4>
+                        <h4>{`${playerNameX} - ${scoreTracker.x}`}</h4>
+                        <h4 className="ml">{`${playerNameO} - ${scoreTracker.o}`}</h4>
                      </div>
                         <button className="score-btn" onClick={handleEdit}>Edit</button>
                      </>
