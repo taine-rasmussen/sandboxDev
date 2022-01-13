@@ -1,0 +1,30 @@
+.todo-container {
+  height: 100vh;
+  width: 100vw;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.todo-container h1 {
+  font-size: 4rem;
+}
+
+.todo-card-container {
+  display: flex;
+  margin: 2rem;
+  height: 60%;
+  border-top: 5px solid #000;
+}
+
+.todo-input-container {
+}
+
+.todo-tasks {
+  margin-top: 2rem;
+  border-top: 1px solid #000;
+}
+
+.todo-single-task {
+}

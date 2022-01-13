@@ -9,6 +9,7 @@ import Hero from './Components/Hero/Hero'
 import Gameboard from './Components/Tetris/Gameboard'
 import Memory from './Components/Memory/Memory'
 import Game from './Components/Conway/Game'
+import Todo from './Components/Todo/Todo'
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route exact path='/tetirs' element={<Gameboard />}/>
         <Route exact path='/memory' element={<Memory />}/>
         <Route exact path='/conway' element={<Game />}/>
+        <Route exact path='todo' element={<Todo />} />
       </Routes>
     </div>
   );
