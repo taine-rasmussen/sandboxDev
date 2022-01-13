@@ -19,6 +19,11 @@ const Todo = () => {
       todos.push({id: todos.length, value: input})
       setInput('')
    }
+
+   const handleDelete = (id) => {
+      const newList = todos.filter((task) => task.id !== id)
+      setTodos(newList)
+   }
    
    return (
       <div className="todo-container">
@@ -36,10 +41,10 @@ const Todo = () => {
             </div>
             <div className="todo-tasks">
                {todos.map((task) => {
-                  console.log(task)
                   return(
                      <div className="todo-single-task" key={task.id}>
                         <h3>{task.value}</h3>
+                        <button onClick={() => handleDelete(task.id)}>Delete</button>
                      </div>
                   )
                })}
